@@ -21,10 +21,10 @@ public class ProductController {
     public ResponseEntity<ProductResponse> getProductByID(@PathVariable Long id){
        return ResponseEntity.ok(productService.getProductById(id));
    }
-   @GetMapping("/dec/{id}/{amount}")
-    public boolean decreaseCountByCount(@PathVariable Long id,int count){
-      return productService.decreaseCountByCount(id,count);
-   }
+//   @GetMapping("/dec/{id}/{amount}")
+//    public boolean decreaseCountByCount(@PathVariable Long id,int count){
+//      return productService.decreaseCountByCount(id,count);
+//   }
   @GetMapping("/inc/{id}/{amount}")
     public void increaseCountByCount(@PathVariable Long id,int count){
        productService.increaseCountByCount(id,count);
