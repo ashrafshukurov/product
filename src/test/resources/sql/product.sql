@@ -1,0 +1,1 @@
+INSERT INTO product VALUES (4,3,'pen',5.50);
