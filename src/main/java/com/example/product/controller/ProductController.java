@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-   @GetMapping("/{id}")
-    public ResponseEntity<ProductResponse> getProductByID(@PathVariable Long id){
-       return ResponseEntity.ok(productService.getProductById(id));
-   }
+//   @GetMapping("/{id}")
+//    public ResponseEntity<ProductResponse> getProductByID(@PathVariable Long id){
+//       return ResponseEntity.ok(productService.getProductById(id));
+//   }
    @GetMapping("/dec/{id}/{amount}")
     public boolean decreaseCountByCount(@PathVariable Long id,int count){
       return productService.decreaseCountByCount(id,count);
