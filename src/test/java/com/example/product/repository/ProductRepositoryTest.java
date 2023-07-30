@@ -26,7 +26,7 @@ class ProductRepositoryTest {
     @Autowired
     private ProductRepository productRepository;
     @Test
-//    @Sql(scripts = "classpath:sql/product.sql",executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(scripts = "classpath:sql/product.sql",executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     public void givenFindByIdWhenFoundThenReturnEntity(){
         //arrange
         Long id=4L;

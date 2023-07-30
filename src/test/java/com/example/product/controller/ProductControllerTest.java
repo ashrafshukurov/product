@@ -42,7 +42,7 @@ class ProductControllerTest {
     }
 
     @Test
-//    @Sql(scripts = "classpath:sql/product.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(scripts = "classpath:sql/product.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     public void givenGetProductByIdWhenFoundThenReturnEntity() {
         //arrange
         Long id = 4L;
@@ -57,6 +57,7 @@ class ProductControllerTest {
         //assert
         assertNotNull(response.getBody());
         assertEquals(HttpStatus.OK, response.getStatusCode());
+
 
 
     }

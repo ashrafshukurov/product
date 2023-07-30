@@ -25,10 +25,10 @@ public class ProductController {
     public boolean decreaseCountByCount(@PathVariable Long id,int count){
       return productService.decreaseCountByCount(id,count);
    }
-//  @GetMapping("/inc/{id}/{amount}")
-//    public void increaseCountByCount(@PathVariable Long id,int count){
-//       productService.increaseCountByCount(id,count);
-//  }
+  @GetMapping("/inc/{id}/{amount}")
+    public void increaseCountByCount(@PathVariable Long id,int count){
+       productService.increaseCountByCount(id,count);
+  }
 
 
 
